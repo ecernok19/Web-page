@@ -1,0 +1,326 @@
+body {
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #34495e;
+    padding-top: 80px; /* Account for fixed nav bar height */
+}
+
+.container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 30px 30px; /* Adjusted padding, top padding handled by body */
+    background-color: #fff;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.1);
+    border-radius: 0 0 10px 10px; /* Rounded corners at bottom, top is flush with nav */
+}
+
+/* Navigation Bar */
+#mainNav {
+    background-color: #2c3e50; /* Dark blue for nav */
+    padding: 0 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+#mainNav ul {
+    max-width: 960px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start; /* Align to left, or center if preferred */
+}
+
+#mainNav ul li {
+    margin-right: 0; /* Remove right margin, spacing handled by padding */
+}
+
+#mainNav ul li a {
+    display: block;
+    color: #ecf0f1; /* Light color for nav text */
+    text-decoration: none;
+    padding: 18px 22px; /* Increased padding for better touch targets */
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-bottom: 3px solid transparent; /* For active indicator */
+}
+
+#mainNav ul li a:hover {
+    background-color: #34495e; /* Slightly lighter blue on hover */
+    color: #fff;
+}
+
+#mainNav ul li a.active {
+    color: #fff; /* White text for active link */
+    background-color: #1abc9c; /* Accent teal for active background */
+    border-bottom-color: #fff; /* White underline for active */
+}
+
+
+/* Page Sections */
+.page-section {
+    padding: 30px 20px; /* Padding for content within each page */
+    border-bottom: 1px solid #ecf0f1;
+}
+.page-section:last-of-type {
+    border-bottom: none;
+}
+
+.page-section.active-page {
+    display: block;
+}
+
+/* Header specific to Home Page */
+#homePage .resume-header {
+    text-align: center;
+    margin-bottom: 30px; /* Reduced margin */
+    padding-bottom: 20px; /* Reduced padding */
+    border-bottom: 3px solid #1abc9c;
+}
+
+#homePage .resume-header h1 {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 3em; /* Slightly smaller than original for balance */
+    color: #2c3e50;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+#homePage .resume-header p {
+    margin: 8px 0 0;
+    font-size: 1.3em; /* Slightly smaller */
+    color: #7f8c8d;
+    font-weight: 300;
+}
+
+/* General Page Headings (H2 for page titles) */
+.page-section > h2 {
+    font-family: 'Lato', sans-serif;
+    font-size: 2.2em;
+    color: #2c3e50;
+    margin-top: 0; /* Remove top margin if it's the first element */
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #1abc9c;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+/* Sub-section Headings (H3 within pages like Resume) */
+.resume-subsection h3, .project-entry h3.project-name {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6em; /* Adjusted H3 size */
+    color: #34495e;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+.resume-subsection:first-of-type h3 {
+    margin-top: 0;
+}
+.project-entry:first-of-type h3.project-name {
+    margin-top: 0;
+}
+
+
+/* Specific content styling adjustments */
+#summaryText { /* Previously #summary p */
+    font-size: 1.1em;
+    text-align: left; /* Changed from justify for better readability for some */
+    color: #555;
+    line-height: 1.8;
+}
+
+.resume-subsection {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #dfe6e9;
+}
+.resume-subsection:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+
+/* Job/Education/Project Entry Styling */
+.job-entry, .education-entry, .project-entry {
+    margin-bottom: 25px;
+}
+.job-entry:last-child, .education-entry:last-child, .project-entry:last-child {
+    margin-bottom: 0;
+}
+
+/* Titles within entries (Job Title, Degree Name) are now H4 */
+.job-title, .degree-name {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.3em; /* Adjusted H4 size */
+    color: #34495e;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+
+.company-name, .institution-name, .job-dates, .graduation-date, .project-dates {
+    font-size: 1em;
+    color: #7f8c8d;
+    margin-bottom: 8px;
+    font-weight: 400;
+}
+
+.job-description, .education-details, .project-description {
+    margin-left: 20px;
+    font-size: 1em;
+    color: #555;
+}
+
+.job-description li {
+    margin-bottom: 6px;
+    list-style-type: disc;
+    list-style-position: outside;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-left: 0;
+}
+
+.skills-list li {
+    background-color: #ecf0f1;
+    color: #34495e;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.95em;
+    font-weight: 500;
+    border: 1px solid #bdc3c7;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.skills-list li:hover {
+    background-color: #1abc9c;
+    color: #fff;
+    border-color: #16a085;
+}
+
+#contact ul li {
+    margin-bottom: 10px;
+    font-size: 1.05em;
+}
+
+a {
+    color: #1abc9c;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover, a:focus {
+    color: #16a085;
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px; /* Reduced margin top */
+    padding: 25px 0; /* Padding top and bottom */
+    border-top: 1px solid #ecf0f1;
+    font-size: 0.95em;
+    color: #95a5a6;
+    background-color: #fff; /* Ensure footer has bg if container doesn't extend */
+    position: relative; /* For stacking context if needed */
+    width: 100%;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    body {
+        padding-top: 60px; /* Adjust for potentially smaller nav */
+    }
+    .container {
+        padding: 0 15px 15px;
+        margin: 0; /* Remove side margins on smaller screens */
+        border-radius: 0; /* Full width, no top radius if nav is full width */
+    }
+    #mainNav ul {
+        justify-content: space-around; /* Better for limited space */
+    }
+    #mainNav ul li a {
+        padding: 15px 10px;
+        font-size: 1em;
+    }
+
+    #homePage .resume-header h1 {
+        font-size: 2.4em;
+    }
+    #homePage .resume-header p {
+        font-size: 1.15em;
+    }
+    .page-section > h2 {
+        font-size: 1.9em;
+    }
+    .resume-subsection h3, .project-entry h3.project-name {
+        font-size: 1.4em;
+    }
+    .job-title, .degree-name {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding-top: 56px; /* Further adjust for nav */
+    }
+    #mainNav ul li a {
+        padding: 14px 8px;
+        font-size: 0.9em;
+    }
+    .page-section {
+        padding: 20px 10px;
+    }
+    #homePage .resume-header h1 {
+        font-size: 2em;
+    }
+    #homePage .resume-header p {
+        font-size: 1em;
+    }
+    .page-section > h2 {
+        font-size: 1.6em;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+    .resume-subsection h3, .project-entry h3.project-name {
+        font-size: 1.3em;
+    }
+     .job-title, .degree-name {
+        font-size: 1.1em;
+    }
+    .skills-list {
+        gap: 8px;
+    }
+    .skills-list li {
+        font-size: 0.9em;
+        padding: 6px 12px;
+    }
+    .job-description, .education-details, .project-description {
+        margin-left: 10px;
+    }
+    footer {
+      margin-top: 20px;
+      padding: 20px 0;
+    }
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Professional Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <script type="module" src="index.tsx"></script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div class="container" id="appContainer">
+        <nav id="mainNav">
+            <ul>
+                <li><a href="#home" id="navHome" class="active">Home</a></li>
+                <li><a href="#resume" id="navResume">Resume</a></li>
+                <li><a href="#projects" id="navProjects">Projects</a></li>
+            </ul>
+        </nav>
+
+        <main id="pageContentContainer">
+            <!-- Home Page Section -->
+            <section id="homePage" class="page-section active-page" aria-labelledby="home-page-heading">
+                <header class="resume-header">
+                    <h1 id="userName">[Your Name]</h1>
+                    <p id="userTitle">[Your Professional Title]</p>
+                </header>
+                <div class="content-wrapper" aria-labelledby="summary-heading">
+                    <h2 id="summary-heading">About Me</h2>
+                    <p id="summaryText">
+                        [A brief summary of your professional background, skills, and career goals. Highlight your key achievements and what you bring to a potential employer.]
+                    </p>
+                </div>
+            </section>
+
+            <!-- Resume Page Section -->
+            <section id="resumePage" class="page-section" aria-labelledby="resume-page-heading" style="display: none;">
+                <h2 id="resume-page-heading">My Resume</h2>
+                
+                <div id="contact" class="resume-subsection" aria-labelledby="contact-heading">
+                    <h3 id="contact-heading">Contact Information</h3>
+                    <ul id="contactList">
+                        <li>Email: <a href="mailto:your.email@example.com">[your.email@example.com]</a></li>
+                        <li>Phone: [Your Phone Number]</li>
+                        <li>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">[linkedin.com/in/yourprofile]</a></li>
+                        <li>Portfolio: <a href="https://yourportfolio.com" target="_blank" rel="noopener noreferrer">[yourportfolio.com]</a></li>
+                    </ul>
+                </div>
+
+                <div id="experience" class="resume-subsection" aria-labelledby="experience-heading">
+                    <h3 id="experience-heading">Experience</h3>
+                    <div class="job-entry">
+                        <h4 class="job-title">[Job Title 1]</h4>
+                        <p class="company-name">[Company Name] | [City, State]</p>
+                        <p class="job-dates">[Dates of Employment, e.g., Jan 2020 - Present]</p>
+                        <ul class="job-description">
+                            <li>[Responsibility or achievement 1]</li>
+                            <li>[Responsibility or achievement 2]</li>
+                            <li>[Responsibility or achievement 3]</li>
+                        </ul>
+                    </div>
+                    <div class="job-entry">
+                        <h4 class="job-title">[Job Title 2]</h4>
+                        <p class="company-name">[Company Name] | [City, State]</p>
+                        <p class="job-dates">[Dates of Employment, e.g., Jun 2017 - Dec 2019]</p>
+                        <ul class="job-description">
+                            <li>[Responsibility or achievement 1]</li>
+                            <li>[Responsibility or achievement 2]</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="education" class="resume-subsection" aria-labelledby="education-heading">
+                    <h3 id="education-heading">Education</h3>
+                    <div class="education-entry">
+                        <h4 class="degree-name">[Degree Name]</h4>
+                        <p class="institution-name">[Institution Name] | [City, State]</p>
+                        <p class="graduation-date">[Graduation Date, e.g., May 2017]</p>
+                        <p class="education-details">[Optional: Relevant coursework, honors, GPA if noteworthy]</p>
+                    </div>
+                </div>
+
+                <div id="skills" class="resume-subsection" aria-labelledby="skills-heading">
+                    <h3 id="skills-heading">Skills</h3>
+                    <ul id="skillList" class="skills-list">
+                        <li>[Skill 1]</li>
+                        <li>[Skill 2]</li>
+                        <li>[Skill 3]</li>
+                        <li>[Skill 4: e.g., JavaScript, Python, Project Management, UI/UX Design]</li>
+                        <li>[Skill 5]</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Projects Page Section -->
+            <section id="projectsPage" class="page-section" aria-labelledby="projects-page-heading" style="display: none;">
+                <h2 id="projects-page-heading">Projects & Achievements</h2>
+                <div class="project-entry">
+                    <h3 class="project-name">[Project/Achievement Name 1]</h3>
+                    <p class="project-dates">[Date or Duration]</p>
+                    <p class="project-description">
+                        [Brief description of the project or achievement, your role, and key outcomes or technologies used. You can include a link if applicable.]
+                        <a href="#" target="_blank" rel="noopener noreferrer">[Link to Project/Details]</a>
+                    </p>
+                </div>
+                <div class="project-entry">
+                    <h3 class="project-name">[Project/Achievement Name 2]</h3>
+                    <p class="project-dates">[Date or Duration]</p>
+                    <p class="project-description">
+                        [Brief description of the project or achievement.]
+                    </p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; <span id="currentYear"></span> [Your Name]. All rights reserved.</p>
+        </footer>
+    </div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
