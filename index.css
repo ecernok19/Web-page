@@ -80,12 +80,35 @@ body {
     display: block;
 }
 
+/* HomePage Specific Styling */
+#homePage {
+    padding: 40px 25px; /* More breathing room */
+    background-color: #fdfdfd; /* Very light off-white */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* Subtle shadow */
+    /* Note: border-bottom from .page-section will still apply if not overridden or last */
+}
+
 /* Header specific to Home Page */
 #homePage .resume-header {
     text-align: center;
-    margin-bottom: 30px; /* Reduced margin */
+    margin-bottom: 20px; /* Reduced margin */
     padding-bottom: 20px; /* Reduced padding */
     border-bottom: 3px solid #1abc9c;
+}
+
+/* Profile Picture Styles */
+.profile-picture-container {
+    text-align: center; /* Center the image */
+    margin-bottom: 20px; /* Space below the image */
+}
+
+#profilePic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Make it circular */
+    border: 3px solid #1abc9c; /* Accent color border */
+    object-fit: cover; /* Ensure the image covers the area well */
 }
 
 #homePage .resume-header h1 {
@@ -95,11 +118,12 @@ body {
     color: #2c3e50;
     font-weight: 700;
     letter-spacing: -1px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
 #homePage .resume-header p {
     margin: 8px 0 0;
-    font-size: 1.3em; /* Slightly smaller */
+    font-size: 1.4em; /* Slightly smaller */
     color: #7f8c8d;
     font-weight: 300;
 }
@@ -107,11 +131,11 @@ body {
 /* General Page Headings (H2 for page titles) */
 .page-section > h2 {
     font-family: 'Lato', sans-serif;
-    font-size: 2.2em;
+    font-size: 2em; /* Made slightly less dominant */
     color: #2c3e50;
     margin-top: 0; /* Remove top margin if it's the first element */
-    margin-bottom: 30px;
-    padding-bottom: 15px;
+    margin-bottom: 25px; /* Adjusted margin */
+    padding-bottom: 10px; /* Adjusted padding */
     border-bottom: 2px solid #1abc9c;
     font-weight: 600;
     letter-spacing: -0.5px;
@@ -229,6 +253,48 @@ a {
 a:hover, a:focus {
     color: #16a085;
     text-decoration: underline;
+}
+
+/* Social Media Links Section */
+.social-media-links {
+    margin-top: 30px; /* Space above the section */
+    padding-top: 20px; /* Space within the section, above the heading */
+    border-top: 1px solid #ecf0f1; /* Subtle separator line */
+    text-align: center; /* Center the content */
+}
+
+.social-media-links h3 {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6em;
+    color: #34495e;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.social-media-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Arrange links in a row */
+    justify-content: center; /* Center the links */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 15px; /* Space between links */
+}
+
+.social-media-links ul li a {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #ecf0f1; /* Light background for links */
+    color: #2c3e50; /* Dark text color */
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-media-links ul li a:hover {
+    background-color: #1abc9c; /* Accent color on hover */
+    color: #fff; /* White text on hover */
 }
 
 footer {
