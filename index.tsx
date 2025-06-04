@@ -14,13 +14,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to switch pages
     function showPage(pageId: string) {
+        console.log(`Attempting to show page: ${pageId}`);
         pageSections.forEach(section => {
+            const htmlSection = section as HTMLElement;
             if (section.id === pageId) {
-                (section as HTMLElement).style.display = 'block';
+                console.log(`Showing section: ${section.id}`);
+                htmlSection.style.display = 'block';
                 section.classList.add('active-page');
+                console.log(`Section ${section.id} display style set to: ${htmlSection.style.display}`);
             } else {
-                (section as HTMLElement).style.display = 'none';
+                console.log(`Hiding section: ${section.id}`);
+                htmlSection.style.display = 'none';
                 section.classList.remove('active-page');
+                console.log(`Section ${section.id} display style set to: ${htmlSection.style.display}`);
             }
         });
 
@@ -31,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 link.classList.remove('active');
             }
         });
+        console.log(`Finished processing showPage for: ${pageId}`);
     }
 
     // Event listeners for navigation links
